@@ -1,15 +1,14 @@
 calculator: ObjectFile/calculator.o ObjectFile/getop.o ObjectFile/stack.o ObjectFile/getch.o
-	gcc ObjectFile/calculator.o ObjectFile/getop.o ObjectFile/getch.o ObjectFile/stack.o -o calculator
+	gcc ObjectFile/calculator.o ObjectFile/getop.o ObjectFile/getch.o ObjectFile/stack.o -lm -g -o calculator
 
 ObjectFile/calculator.o: SourceFile/calculator.c SourceFile/calc.h
-	gcc -c SourceFile/calculator.c -o ObjectFile/calculator.o
+	gcc -c SourceFile/calculator.c -lm -o ObjectFile/calculator.o
 
 ObjectFile/stack.o: SourceFile/stack.c SourceFile/calc.h
-	gcc -c SourceFile/stack.o -o ObjectFile/stack.o
+	gcc -c SourceFile/stack.c -o ObjectFile/stack.o
 
 ObjectFile/getop.o: SourceFile/getop.c SourceFile/calc.h
 	gcc -c SourceFile/getop.c -o ObjectFile/getop.o
 
 ObjectFile/getch.o: SourceFile/getch.c SourceFile/calc.h
 	gcc -c SourceFile/getch.c -o ObjectFile/getch.o
-
