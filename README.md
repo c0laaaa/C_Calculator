@@ -50,3 +50,22 @@ $ ./calculator
 -2.4 4 pow
 33.1776
 ~~~
+
+## 第四版
+增加了对于变量的支持， 用大写字母A~Z来代表变量，然后再增加一个小写字母v存放打印的值
+
+比如：计算sin(π/2) + sin(3π/2)和sin(π/2) + cos(3π/2)
+
+运行calculator可执行程序，然后输入如下，可以得出结果
+
+~~~ shell
+$ ./calculator    
+3.14159265 2 / A =
+value had been assigned
+3 A * B =
+value had been assigned
+A sin B sin +
+result is 0
+A sin B cos +  
+result is 0.99999999
+~~~
